@@ -25,6 +25,8 @@
 
         "baseUrl": "./src",
         "paths": {
+            "~hooks": ["./hooks"],
+            "~store": ["./store"],
             "~styles/*": ["./styles/*"],
             "~types": ["./types"],
             "~utils": ["./utils"]
