@@ -14,6 +14,9 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
+      sass:
+        specifier: ^1.89.0
+        version: 1.89.0
     devDependencies:
       '@eslint/js':
         specifier: ^9.27.0
@@ -2361,7 +2364,6 @@ snapshots:
   chokidar@4.0.3:
     dependencies:
       readdirp: 4.1.2
-    optional: true
 
   color-convert@2.0.1:
     dependencies:
@@ -2815,8 +2817,7 @@ snapshots:
 
   ignore@7.0.4: {}
 
-  immutable@5.1.2:
-    optional: true
+  immutable@5.1.2: {}
 
   import-fresh@3.3.1:
     dependencies:
@@ -3135,8 +3136,7 @@ snapshots:
 
   react@19.1.0: {}
 
-  readdirp@4.1.2:
-    optional: true
+  readdirp@4.1.2: {}
 
   reflect.getprototypeof@1.0.10:
     dependencies:
@@ -3224,7 +3224,6 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.1
-    optional: true
 
   scheduler@0.26.0: {}
 
