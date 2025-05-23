@@ -1,5 +1,6 @@
 import eslintJs from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
+import importHelpers from "eslint-plugin-import-helpers";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import pluginReact from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -22,14 +23,23 @@ export default tseslint.config(
         },
         plugins: {
             "react-hooks": reactHooks,
-            "react-refresh": reactRefresh
+            "react-refresh": reactRefresh,
+            "import-helpers": importHelpers
         },
         rules: {
             "react/react-in-jsx-scope": "off",
             "@typescript-eslint/no-empty-object-type": "off",
             "react-hooks/rules-of-hooks": "error",
             "react-hooks/exhaustive-deps": "warn",
-            "react-refresh/only-export-components": ["warn", { allowConstantExport: true }]
+            "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+            "import-helpers/order-imports": [
+                "warn",
+                {
+                    newlinesBetween: "never",
+                    groups: ["module", "/^~/", ["parent", "sibling", "index"]],
+                    alphabetize: { order: "asc", ignoreCase: true }
+                }
+            ]
         }
     },
     eslintConfigPrettier,
