@@ -28,12 +28,16 @@ export const initializeDB = async (dbName: string, storeName: string, openDB: ()
         if (!storeExists) {
             console.warn(`Object store "${storeName}" not found.`);
 
-            return;
+            return false;
         }
 
         console.log(`Object store "${storeName}" found.`);
+
+        return true;
     } catch (error) {
         console.error(`Error initializing database "${dbName}":`, error);
+
+        return false;
     }
 };
 export const addItemToDB = async <T>(storeName: string, item: T, openDB: () => Promise<IDBDatabase>) => {
