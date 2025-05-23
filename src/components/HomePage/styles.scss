@@ -1,0 +1,10 @@
+@use "~styles/theme.scss" as theme;
+
+.home-page {
+    width: 100%;
+    height: min-content;
+    color: theme.$color-text-secondary;
+    font: theme.$font;
+    font-size: theme.$font-3xl;
+    text-align: center;
+}
