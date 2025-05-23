@@ -31,7 +31,7 @@ export const initializeDB = async (dbName: string, storeName: string, openDB: ()
             return;
         }
 
-        console.warn(`Object store "${storeName}" found.`);
+        console.log(`Object store "${storeName}" found.`);
     } catch (error) {
         console.error(`Error initializing database "${dbName}":`, error);
     }
