@@ -3,8 +3,42 @@
 .home-page {
     width: 100%;
     height: min-content;
-    color: theme.$color-text-secondary;
-    font: theme.$font;
-    font-size: theme.$font-3xl;
-    text-align: center;
+    padding: theme.$spacing-10 theme.$spacing-4 theme.$spacing-1;
+    opacity: 0;
+    display: grid;
+    grid: repeat(2, min-content) / min(100%, theme.$max-layout);
+    row-gap: theme.$spacing-2;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in 0s 1 normal forwards;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: min-content;
+        }
+
+        &logo {
+            width: min(100%, 10rem);
+            height: min-content;
+            object-fit: contain;
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: theme.$color-text-secondary;
+            font: theme.$font;
+
+            &--title {
+                color: theme.$color-text-primary;
+                font-size: theme.$font-lg;
+            }
+        }
+    }
+
+    @media (width >= theme.$breakpoint-md) {
+        &__logo {
+            width: min(100%, 16rem);
+        }
+    }
 }
