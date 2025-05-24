@@ -1,0 +1,59 @@
+@use "~styles/theme.scss" as theme;
+
+.todo-list-wrapper {
+    width: 100%;
+    height: auto;
+    border-top: theme.$border-md solid theme.$color-brand;
+    opacity: 0;
+    display: flex;
+    flex-grow: 1;
+    gap: theme.$spacing-4;
+    place-content: center;
+    place-items: center;
+    background-color: theme.$color-dark;
+    animation: fadeIn 0.5s ease-in 0s 1 normal forwards;
+
+    &__ {
+        &box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: theme.$spacing-4;
+            place-content: center;
+            place-items: center;
+
+            &-- {
+                &query {
+                    height: min-content;
+                    padding-inline: theme.$spacing-4;
+                    justify-content: start;
+                }
+
+                &queries {
+                    height: min-content;
+                    padding: 0;
+                    justify-content: start;
+                }
+
+                &data {
+                    padding-inline: theme.$spacing-4;
+                    overflow-x: auto;
+                    opacity: 0;
+                    display: grid;
+                    grid: 100% / repeat(3, 18rem);
+                    column-gap: theme.$spacing-8;
+                    justify-content: start;
+                    align-self: stretch;
+                    animation: fadeIn 0.5s ease-in 0s 1 normal forwards;
+                }
+            }
+        }
+    }
+
+    &--is-initialized {
+        padding-block: theme.$spacing-4 theme.$spacing-8;
+        display: grid;
+        grid: min-content 1fr / min(100%, theme.$max-layout);
+    }
+}
