@@ -1,2 +1,2 @@
-export * from "./vite";
+export * from "./global";
 export * from "./todoListSlice";
